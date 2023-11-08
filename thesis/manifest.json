@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "TimeTraveller",
+  "version": "1.0.0",
+  "permissions": ["tabs", "contextMenus"],
+  "background": {
+    "service-worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["templates/JavaScript/content.js"]
+    }
+  ],
+
+  "action": {
+    "default_popup": "templates/htmlRequest.html"
+  }
+}
